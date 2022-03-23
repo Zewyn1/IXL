@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      name: 'Ryzen 7 5800x',
+      name: 'Ryzen 7 5800X',
       slug: 'ryzen-7-5800x',
       category: 'CPU',
       image: '/Images/ryzen7.jpg',
