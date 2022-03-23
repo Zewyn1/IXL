@@ -12,7 +12,8 @@ body {
 main {
   flex: 1;
 }
-.btn-primary {
+.btn-primary,
+.btn-outline-primary {
   background-color: gray;
 }
 .btn-primary:hover {
@@ -53,4 +54,31 @@ main {
 .checkout-steps > div.active {
   border-bottom: 0.2rem solid #f08000;
   color: #f08000;
+}
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar {
+  font-size: larger;
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #100901;
+  transition: 0.3s;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.site-container {
+  transition: 0.2s;
+}
+.active-cont {
+  margin-left: -70px;
+}
+.active-nav {
+  left: 0;
+}
+.text-bold {
+  font-weight: bold;
 }
