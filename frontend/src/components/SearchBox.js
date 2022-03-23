@@ -1,11 +1,11 @@
+import '../App.css';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Dropdown from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import { useNavigate } from 'react-router-dom';
-
 export default function SearchBox() {
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
@@ -13,14 +13,15 @@ export default function SearchBox() {
     e.preventDefault();
     navigate(query ? `/search/?query=${query}` : '/search');
   };
-
   return (
-    <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-        <img src="/Image/search.png" />
-      </Dropdown.Toggle>
-      <Dropdown.Menu>
-        <Form className="d-flex me-auto" onSubmit={submitHandler}>
+    <div className="searchbox">
+      <Dropdown>
+        <Dropdown.Toggle variant="dark" id="dropdown-basic">
+          <div className="searchimage">
+            <img src="/Images/search.png" />
+          </div>
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
           <InputGroup>
             <FormControl
               type="text"
@@ -35,8 +36,8 @@ export default function SearchBox() {
               <i className="fas fa-search"></i>
             </Button>
           </InputGroup>
-        </Form>
-      </Dropdown.Menu>
-    </Dropdown>
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
   );
 }
